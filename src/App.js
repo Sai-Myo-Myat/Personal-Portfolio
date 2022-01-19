@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+//importing components
+import Nav from "./components/Nav";
+import About from "./components/About";
+import Blogs from "./components/Blogs";
+import Myprojects from "./components/Myprojects";
+import Home from "./components/Home";
+import Sidemenu from "./components/Sidemenu";
 
 function App() {
+  const [menuActive, setMenuActive] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Nav menuActive={menuActive} setMenuActive={setMenuActive} />
+        <div className="sections">
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/myProjects" element={<Myprojects />} />
+            <Route
+              path="/sideMenu"
+              element={
+                <Sidemenu
+                  menuActive={menuActive}
+                  setMenuActive={setMenuActive}
+                />
+              }
+            />
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }

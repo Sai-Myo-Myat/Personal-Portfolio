@@ -1,0 +1,15 @@
+.Blogs {
+  width: 100vw;
+}
+
+.backImg {
+  width: 100%;
+  height: 90%;
+  overflow-y: hidden;
+}
+
+.backImg img {
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}

@@ -1,0 +1,28 @@
+.sidemenu {
+  width: 50%;
+  height: 100vh;
+  background-color: #a4ebf3;
+  position: absolute;
+  top: 15vh;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.sidemenu .lists {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #aaa;
+  list-style: none;
+  font-size: 23px;
+}
+
+.slide {
+  transform: translateX(0%);
+}

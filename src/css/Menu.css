@@ -1,0 +1,31 @@
+.line {
+  width: 100%;
+  height: 5px;
+  background-color: #aaa;
+  margin: 3px;
+  transform-origin: left;
+  transition: all 1s ease;
+}
+
+.Menu {
+  cursor: pointer;
+  width: 35px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.active div:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.active div:nth-child(3) {
+  transform: rotate(-45deg);
+}
