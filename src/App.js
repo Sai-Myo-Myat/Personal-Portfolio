@@ -21,17 +21,9 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/myProjects" element={<Myprojects />} />
-            <Route
-              path="/sideMenu"
-              element={
-                <Sidemenu
-                  menuActive={menuActive}
-                  setMenuActive={setMenuActive}
-                />
-              }
-            />
           </Routes>
         </div>
+        <Sidemenu menuActive={menuActive} setMenuActive={setMenuActive} />
       </Router>
     </div>
   );

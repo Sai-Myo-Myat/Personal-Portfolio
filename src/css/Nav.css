@@ -44,8 +44,8 @@ ul > li {
     font-size: 25px;
   }
 
-  ul > li {
-    font-size: 20px;
+  ul > a {
+    font-size: 18px;
   }
 }
 

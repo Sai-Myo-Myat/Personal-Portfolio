@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import "../css/Sidemenu.css";
 import SideItem from "./sideItem";
 //importing components
 
 function Sidemenu({ menuActive, setMenuActive }) {
-  const [data, setData] = useState([
+  const data = useRef([
     { link: "/about", text: "About" },
     { link: "/blogs", text: "Blogs" },
     { link: "/myProjects", text: "My Projects" },
@@ -12,7 +12,7 @@ function Sidemenu({ menuActive, setMenuActive }) {
   return (
     <div className={`sidemenu ${menuActive ? "slide" : ""}`}>
       <div className="lists">
-        {data.map((item) => {
+        {data.current.map((item) => {
           return (
             <SideItem
               link={item.link}
